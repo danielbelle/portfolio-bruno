@@ -106,11 +106,9 @@ function Projects() {
       className="flex justify-center flex-col max-w-[1160px] m-auto relative min-h-[400px] sm:mt-[200px] mt-[300px] md:mt-0"
     >
       <div>
-        <p className="flex justify-center font-[600] text-gray-600">
-          Mais Recentes
-        </p>
+        <p className="flex justify-center font-[600] text-gray-600">Latest</p>
         <h1 className="flex justify-center text-[3rem] font-[600] mb-10">
-          Projetos
+          Projects
         </h1>
         <div className="m-auto items-center">
           <div className="mt-[1rem]">
@@ -124,7 +122,7 @@ function Projects() {
                     <div className="flex items-start min-h-[290px] border-b-[0.1rem] ">
                       <img
                         src={d.img}
-                        alt="Projeto"
+                        alt="project"
                         className="h-[100%] w-[100%] rounded-t-[31px]"
                       />
                     </div>
@@ -148,7 +146,7 @@ function Projects() {
                           rel="noopener noreferrer"
                         >
                           <button className="font-[600] text-[0.8rem] ease-in duration-300 p-[0.8rem] w-[7rem] rounded-[32px] border-solid border-[0.1rem] border-[#353535] hover:cursor-pointer hover:bg-[#353535] hover:text-white bg-[#FFF]">
-                            Projeto
+                            Project
                           </button>
                         </a>
                       </div>

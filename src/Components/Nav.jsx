@@ -15,12 +15,12 @@ function Nav() {
       id="nav"
     >
       <h1 className="w-full lg:text-4xl sm:text-2xl text-1xl text-black m-12 mt-15 p-4 pt-6 text-nowrap">
-        Daniel Henrique Bellé
+        Bruno Kiyoshi Ynumaru
       </h1>
       <ul className="hidden md:flex mt-4 lg:text-2xl text-md  text-nowrap md:mr-5 m-auto ">
         <li className="p-4 mr-3 hover:underline hover:text-[#b5b5b5] hover:underline-offset-[1rem] cursor-pointer">
           <Link to="about" spy={true} smooth={true} offset={0} duration={300}>
-            Saiba +
+            About
           </Link>
         </li>
         <li className="p-4 mr-3 hover:underline hover:text-[#b5b5b5] hover:underline-offset-[1rem] cursor-pointer">
@@ -31,12 +31,12 @@ function Nav() {
             offset={0}
             duration={300}
           >
-            Projetos
+            Projects
           </Link>
         </li>
         <li className="p-4 mr-3 hover:underline hover:text-[#b5b5b5] hover:underline-offset-[1rem] cursor-pointer">
           <Link to="contact" spy={true} smooth={true} offset={0} duration={300}>
-            Bora Conversar?
+            Contact
           </Link>
         </li>
       </ul>
@@ -55,21 +55,34 @@ function Nav() {
         }
       >
         <h1 className="w-full text-2xl text-black text-nowrap m-4">
-          Daniel Bellé
+          Bruno Ynumaru
         </h1>
         <Link to="about" spy={true} smooth={true} offset={0} duration={300}>
-          <li onClick={handleNav}  className="p-4 border-b border-gray-300 cursor-pointer">
-            Saiba +
+          <li
+            onClick={handleNav}
+            className="p-4 border-b border-gray-300 cursor-pointer"
+          >
+            About
           </li>
         </Link>
         <Link to="projects" spy={true} smooth={true} offset={0} duration={300}>
-          <li onClick={handleNav}  className="p-4 border-b border-gray-300 cursor-pointer">
-            Projetos
+          <li
+            onClick={handleNav}
+            className="p-4 border-b border-gray-300 cursor-pointer"
+          >
+            Projects
           </li>
         </Link>
-        <Link onClick={handleNav}  to="contact" spy={true} smooth={true} offset={0} duration={300}>
+        <Link
+          onClick={handleNav}
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={300}
+        >
           <li className="p-4 border-b border-gray-300 cursor-pointer">
-            Bora Conversar?
+            Contact
           </li>
         </Link>
       </ul>

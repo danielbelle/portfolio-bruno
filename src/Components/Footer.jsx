@@ -18,12 +18,12 @@ function Footer() {
       <ul className="flex mt-4 lg:text-2xl md:text-lg text-[0.78rem] text-nowrap m-auto items-center justify-center ">
         <li className="sm:p-4 p-2 sm:mr-3 hover:underline hover:text-[#b5b5b5] hover:underline-offset-[1rem] cursor-pointer">
           <Link to="nav" spy={true} smooth={true} offset={0} duration={300}>
-            Vamos Para Cima?
+            Home
           </Link>
         </li>
         <li className="sm:p-4 p-2 sm:mr-3 hover:underline hover:text-[#b5b5b5] hover:underline-offset-[1rem] cursor-pointer">
           <Link to="about" spy={true} smooth={true} offset={0} duration={300}>
-            Saiba +
+            About
           </Link>
         </li>
         <li className="sm:p-4 p-2 sm:mr-3 hover:underline hover:text-[#b5b5b5] hover:underline-offset-[1rem] cursor-pointer">
@@ -34,14 +34,13 @@ function Footer() {
             offset={0}
             duration={300}
           >
-            Projetos
+            Projects
           </Link>
         </li>
       </ul>
       <div className="flex items-center text-center justify-center text-[#656565] mt-2 mx-4 text-[8px] sm:text-[14px] text-xs">
         <p>
-          Copyright &#169; {date} Daniel Henrique Bellé. Todos os direitos
-          reservados.
+          Copyright &#169; {date} Bruno Kiyoshi Ynumaru. All Rights Reserved.
         </p>
       </div>
     </div>

@@ -9,33 +9,22 @@ function About() {
       className="justify-between items-center max-w-[1160px] m-auto relative min-h-[1060px] sm:min-h-[750px] h-[80vh] pt-[30px] pb-[50px]"
     >
       <p className="flex justify-center font-[600] text-gray-600">
-        Conheça Mais
+        Find out more
       </p>
       <h1 className="flex text-[3rem] font-[800] mb-2 justify-center ">
-        Sobre mim
+        About me
       </h1>
       <div className="about-container">
         <div className="about-details-container mx-10">
           <div className="text-gray-600">
-            <p className="text-justify m-[20px]">
-              Entusiasta obcecado por desenvolvimento web. Profissional dedicado
-              ao desenvolvimento de soluções que possam proporcionar momentos
-              inesquecíveis aos usuários.
+            <p className="text-justify m-[20px] md:text-2xl">
+              Passionate about harnessing the power of data to drive business
+              growth, I am a data scientist based in Rio de Janeiro, Brazil.
             </p>
-            <p className="text-justify m-[20px]">
-              Atuei como desenvolvedor Full Stack JavaScript e PHP por 1 ano e
-              também desenvolvo sites freelancer.
-            </p>
-            <p className="text-justify m-[20px]">
-              Neste caminho já dei muito DELETE no PostgreSQL sem utilizar WHERE
-              (triste haha), comecei muitos projetos nomeando variáveis em
-              português e terminei em inglês, dei muitos commits no GitHub sem
-              debugar e fazer testes (vergonha) e ganhei o premio do usuário que
-              mais pesquisou mensagens de erro StackOverflow ao invés de ler a
-              documentação oficial (risos).
-            </p>
-            <p className="text-justify m-[20px]">
-              E nas horas vagas gosto de ler livros de Ficção Científica.
+            <p className="text-justify m-[20px] md:text-2xl">
+              With a knack for solving complex problems, I specialize in
+              transforming raw data into valuable insights that fuel strategic
+              decision-making and into solutions that make people's jobs easier.
             </p>
           </div>
           <div className="flex justify-between md:gap-[1.5rem] mb-[2rem] mt-[2rem] gap-2">
@@ -43,7 +32,7 @@ function About() {
               <div className="p-[1rem] flex-1 bg-white rounded-[32px] mb-5 md:h-[180px] h-[160px] lg:h-[200px] border-solid border-[0.1rem] border-[#a3a3a3]">
                 <img
                   src={Experience}
-                  alt="Ícone de experiência"
+                  alt="experience icon"
                   className="h-[2rem] mx-auto my-2"
                 />
                 <h3 className="font-bold">Duarte's Digital Soluctions</h3>
@@ -55,7 +44,7 @@ function About() {
               <div className="p-[1rem] flex-1 bg-white rounded-[32px] border-solid lg:h-[200px] md:h-[180px] h-[160px] border-[0.1rem] border-[#a3a3a3] max-w-[350px]">
                 <img
                   src={Experience}
-                  alt="Ícone de experiência"
+                  alt="experience icon"
                   className="h-[2rem] mx-auto my-2"
                 />
                 <h3 className="font-bold">Pieta.tech</h3>
@@ -69,7 +58,7 @@ function About() {
               <div className="p-[1rem] flex-1 bg-white rounded-[32px] mb-5 lg:h-[200px] md:h-[180px] h-[160px] border-solid border-[0.1rem] border-[#a3a3a3] m-auto">
                 <img
                   src={Experience}
-                  alt="Ícone de experiência"
+                  alt="experience icon"
                   className="h-[2rem] mx-auto my-2"
                 />
                 <h3 className="font-bold">ControlWare</h3>
@@ -81,7 +70,7 @@ function About() {
               <div className="p-[1rem] flex-1 bg-white rounded-[32px] lg:h-[200px] md:h-[180px] h-[160px] border-solid border-[0.1rem] border-[#a3a3a3]">
                 <img
                   src={Education}
-                  alt="Ícone de educação"
+                  alt="graduation icon"
                   className="h-[2rem] mx-auto my-2"
                 />
                 <h3 className="font-bold">Engenharia Elétrica</h3>
