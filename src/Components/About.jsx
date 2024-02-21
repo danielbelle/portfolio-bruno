@@ -35,10 +35,11 @@ function About() {
                   alt="experience icon"
                   className="h-[2rem] mx-auto my-2"
                 />
-                <h3 className="font-bold">Duarte's Digital Soluctions</h3>
+                <h3 className="font-bold">PETROBRAS</h3>
                 <p className="text-gray-600 lg:text-[1rem] text-[0.8rem]">
-                  1+ anos <br />
-                  Web Developer
+                  Current Job
+                  <br />
+                  Data Scientist
                 </p>
               </div>
               <div className="p-[1rem] flex-1 bg-white rounded-[32px] border-solid lg:h-[200px] md:h-[180px] h-[160px] border-[0.1rem] border-[#a3a3a3] max-w-[350px]">
@@ -47,10 +48,10 @@ function About() {
                   alt="experience icon"
                   className="h-[2rem] mx-auto my-2"
                 />
-                <h3 className="font-bold">Pieta.tech</h3>
+                <h3 className="font-bold">Radix Engenharia e Software</h3>
                 <p className="text-gray-600 lg:text-[1rem] text-[0.8rem]">
-                  1+ anos <br />
-                  Front-end ReactJS
+                  6 months <br />
+                  Senior Data Scientist
                 </p>
               </div>
             </div>
@@ -61,21 +62,22 @@ function About() {
                   alt="experience icon"
                   className="h-[2rem] mx-auto my-2"
                 />
-                <h3 className="font-bold">ControlWare</h3>
+                <h3 className="font-bold">BIX Techt</h3>
                 <p className="text-gray-600 lg:text-[1rem] text-[0.8rem]">
-                  1+ anos <br />
-                  Full Stack PHP e JS
+                  8 months <br />
+                  Data Scientist
                 </p>
               </div>
-              <div className="p-[1rem] flex-1 bg-white rounded-[32px] lg:h-[200px] md:h-[180px] h-[160px] border-solid border-[0.1rem] border-[#a3a3a3]">
+              <div className="p-[1rem] flex-1 bg-white rounded-[32px] mb-5 lg:h-[200px] md:h-[180px] h-[160px] border-solid border-[0.1rem] border-[#a3a3a3] m-auto">
                 <img
-                  src={Education}
-                  alt="graduation icon"
+                  src={Experience}
+                  alt="experience icon"
                   className="h-[2rem] mx-auto my-2"
                 />
-                <h3 className="font-bold">Engenharia Elétrica</h3>
+                <h3 className="font-bold">GrayLogix Brasil</h3>
                 <p className="text-gray-600 lg:text-[1rem] text-[0.8rem]">
-                  Universidade Federal de Santa Catarina
+                  4 years and 5 months <br />
+                  Data Scientist and Process Engineering Specialists
                 </p>
               </div>
             </div>

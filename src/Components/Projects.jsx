@@ -1,10 +1,7 @@
 import React from "react";
-import Proj1 from "../Assets/project-1.png";
+import Proj1 from "../Assets/project-1.jpg";
 import Proj2 from "../Assets/project-2.png";
-import Proj3 from "../Assets/project-3.gif";
-import Proj4 from "../Assets/project-4.png";
-import Proj5 from "../Assets/project-5.png";
-import Proj6 from "../Assets/project-6.png";
+import Proj3 from "../Assets/project-3.webp";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -14,46 +11,22 @@ function Projects() {
     {
       key: "1",
       img: `${Proj1}`,
-      name: "Landing Page ReactJS",
-      github: "https://github.com/danielbelle/react-js-landing-page-restaurant",
-      demo: "https://react-js-landing-page-restaurant.vercel.app/",
+      name: "Experimental Bench Automation and Computer Vision Algorithm",
+      demo: "https://bkiyoshi.in/?project=experimental-bench-automation-computer-vision-algorithm",
     },
     {
       key: "2",
       img: `${Proj2}`,
-      name: "Consumo de API Externa",
-      github: "https://github.com/danielbelle/buscador-cep",
-      demo: "https://buscador-cep-pink-pi.vercel.app/",
+      name: "Flare monitor PoC",
+      demo: "https://bkiyoshi.in/?project=flare-monitor-poc",
     },
     {
       key: "3",
-      img: `${Proj6}`,
-      name: "TailwindCSS ReactJS Landing Page",
-      github: "https://github.com/danielbelle/financial-page-rectjs",
-      demo: "https://financial-page-rectjs-tailwindcss.vercel.app/",
-    },
-    {
-      key: "4",
-      img: `${Proj4}`,
-      name: "Quiz ReactJS",
-      github: "https://github.com/danielbelle/quiz-reactjs",
-      demo: "https://quiz-reactjs-ecru.vercel.app/",
-    },
-    {
-      key: "5",
-      img: `${Proj5}`,
-      name: "Search Bar Integrado com API",
-      github: "https://github.com/danielbelle/search-bar-API",
-      demo: "https://search-bar-api.vercel.app/",
-    },
-    {
-      key: "6",
       img: `${Proj3}`,
-      name: "CRUD PHP, CodeIgniter e MySQL",
-      github: "https://github.com/danielbelle/api-orders",
-      demo: "https://www.youtube.com/watch?v=G1Brhqz-PqM",
+      name: "Stock price prediction LSTM",
+      demo: "https://bkiyoshi.in/?project=stock-price-prediction-lstm",
     },
-  ];
+      ];
 
   var settings = {
     dots: true,
@@ -131,7 +104,7 @@ function Projects() {
                         {d.name}
                       </h2>
                       <div className="flex content-center justify-center items-center gap-1 mb-5">
-                        <a
+                        {d.github ? <a
                           href={d.github}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -139,7 +112,7 @@ function Projects() {
                           <button className="font-[600] text-[0.8rem] ease-in duration-300 p-[0.8rem] w-[7rem] rounded-[32px] border-solid border-[0.1rem] border-[#353535] hover:cursor-pointer hover:bg-[#353535] hover:text-white bg-[#FFF]">
                             Github
                           </button>
-                        </a>
+                        </a> : <></>}
                         <a
                           href={d.demo}
                           target="_blank"
