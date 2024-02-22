@@ -1,6 +1,5 @@
 import React from "react";
 import Experience from "../Assets/experience.png";
-import Education from "../Assets/education.png";
 
 function About() {
   return (
@@ -29,7 +28,7 @@ function About() {
           </div>
           <div className="flex justify-between md:gap-[1.5rem] mb-[2rem] mt-[2rem] gap-2">
             <div className="md:contents col-span-2 text-center w-[300px]">
-              <div className="p-[1rem] flex-1 bg-white rounded-[32px] mb-5 md:h-[180px] h-[160px] lg:h-[200px] border-solid border-[0.1rem] border-[#a3a3a3]">
+              <div className="p-[1rem] flex-1 bg-white rounded-[32px] mb-5 h-[200px] lg:h-[220px] border-solid border-[0.1rem] border-[#a3a3a3]">
                 <img
                   src={Experience}
                   alt="experience icon"
@@ -42,21 +41,21 @@ function About() {
                   Data Scientist
                 </p>
               </div>
-              <div className="p-[1rem] flex-1 bg-white rounded-[32px] border-solid lg:h-[200px] md:h-[180px] h-[160px] border-[0.1rem] border-[#a3a3a3] max-w-[350px]">
+              <div className="p-[1rem] flex-1 bg-white rounded-[32px] border-solid lg:h-[220px] h-[200px] border-[0.1rem] border-[#a3a3a3] max-w-[350px]">
                 <img
                   src={Experience}
                   alt="experience icon"
                   className="h-[2rem] mx-auto my-2"
                 />
                 <h3 className="font-bold">Radix Engenharia e Software</h3>
-                <p className="text-gray-600 lg:text-[1rem] text-[0.8rem]">
+                <p className="text-gray-600 lg:text-[1rem] text-[0.7rem]">
                   6 months <br />
                   Senior Data Scientist
                 </p>
               </div>
             </div>
             <div className="md:contents col-span-2 text-center w-[300px]">
-              <div className="p-[1rem] flex-1 bg-white rounded-[32px] mb-5 lg:h-[200px] md:h-[180px] h-[160px] border-solid border-[0.1rem] border-[#a3a3a3] m-auto">
+              <div className="p-[1rem] flex-1 bg-white rounded-[32px] mb-5 lg:h-[220px] h-[200px] border-solid border-[0.1rem] border-[#a3a3a3] m-auto">
                 <img
                   src={Experience}
                   alt="experience icon"
@@ -68,15 +67,15 @@ function About() {
                   Data Scientist
                 </p>
               </div>
-              <div className="p-[1rem] flex-1 bg-white rounded-[32px] mb-5 lg:h-[200px] md:h-[180px] h-[160px] border-solid border-[0.1rem] border-[#a3a3a3] m-auto">
+              <div className="p-[1rem] flex-1 bg-white rounded-[32px] mb-5 lg:h-[220px]  h-[200px] border-solid border-[0.1rem] border-[#a3a3a3] m-auto">
                 <img
                   src={Experience}
                   alt="experience icon"
                   className="h-[2rem] mx-auto my-2"
                 />
                 <h3 className="font-bold">GrayLogix Brasil</h3>
-                <p className="text-gray-600 lg:text-[1rem] text-[0.8rem]">
-                  4 years and 5 months <br />
+                <p className="text-gray-600 lg:text-[1rem] text-[0.7rem]">
+                  4,5 years <br />
                   Data Scientist and Process Engineering Specialists
                 </p>
               </div>
