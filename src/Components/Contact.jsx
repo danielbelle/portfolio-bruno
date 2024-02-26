@@ -58,7 +58,7 @@ function Contact() {
             className="cursor-default h-[2rem] ml-[0.5rem]"
           />
           <form ref={form} onSubmit={sendEmail}>
-            <div className="bg-transparent max-w-[700px] w-[70%] sm:w-[100%] items-center rounded-[5rem]">
+            <div className="bg-transparent max-w-[700px] w-[70%] sm:w-[100%] items-center rounded-[5rem] whitespace-nowrap">
               <input
                 type="email"
                 name="user_email"

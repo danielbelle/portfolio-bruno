@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Proj1 from "../Assets/project-1.jpg";
 import Proj2 from "../Assets/project-2.png";
 import Proj3 from "../Assets/project-3.webp";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Modal from "./Modal";
 
 function Projects() {
   const carouselProjects = [
@@ -32,7 +33,7 @@ function Projects() {
       name: "Stock price prediction LSTM",
       demo: "https://bkiyoshi.in/?project=stock-price-prediction-lstm",
     },
-      ];
+  ];
 
   var settings = {
     dots: true,
@@ -79,6 +80,10 @@ function Projects() {
     ],
   };
 
+  const [showModal, setShowModal] = useState(false);
+
+  const handleOnClose = () => setShowModal(false);
+
   return (
     <div
       id="projects"
@@ -110,24 +115,25 @@ function Projects() {
                         {d.name}
                       </h2>
                       <div className="flex content-center justify-center items-center gap-1 mb-2">
-                        {d.github ? <a
-                          href={d.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                        {d.github ? (
+                          <a
+                            href={d.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <button className="font-[600] text-[0.8rem] ease-in duration-300 p-[0.8rem] w-[7rem] rounded-[32px] border-solid border-[0.1rem] border-[#353535] hover:cursor-pointer hover:bg-[#353535] hover:text-white bg-[#FFF]">
+                              Github
+                            </button>
+                          </a>
+                        ) : (
+                          <></>
+                        )}
+                        <button
+                          className="font-[600] text-[0.8rem] ease-in duration-300 p-[0.8rem] w-[7rem] rounded-[32px] border-solid border-[0.1rem] border-[#353535] hover:cursor-pointer hover:bg-[#353535] hover:text-white bg-[#FFF]"
+                          onClick={() => setShowModal(true)}
                         >
-                          <button className="font-[600] text-[0.8rem] ease-in duration-300 p-[0.8rem] w-[7rem] rounded-[32px] border-solid border-[0.1rem] border-[#353535] hover:cursor-pointer hover:bg-[#353535] hover:text-white bg-[#FFF]">
-                            Github
-                          </button>
-                        </a> : <></>}
-                        <a
-                          href={d.demo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <button className="font-[600] text-[0.8rem] ease-in duration-300 p-[0.8rem] w-[7rem] rounded-[32px] border-solid border-[0.1rem] border-[#353535] hover:cursor-pointer hover:bg-[#353535] hover:text-white bg-[#FFF]">
-                            Project
-                          </button>
-                        </a>
+                          Project
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -137,6 +143,7 @@ function Projects() {
           </div>
         </div>
       </div>
+      <Modal onClose={handleOnClose} visible={showModal} />
     </div>
   );
 }
