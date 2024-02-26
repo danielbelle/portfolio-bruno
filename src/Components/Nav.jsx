@@ -1,12 +1,18 @@
 import React, { useState } from "react";
-import { Link } from "react-scroll";
+import { Link as Scroll } from "react-scroll";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { useLocation } from "react-router-dom";
 
 function Nav() {
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
+  };
+
+  const HeaderView = () => {
+    const location = useLocation();
+    return location.pathname;
   };
 
   return (
@@ -17,29 +23,61 @@ function Nav() {
       <h1 className="w-full lg:text-4xl sm:text-2xl text-1xl text-black m-12 mt-15 p-4 pt-6 text-nowrap">
         Bruno Kiyoshi Ynumaru
       </h1>
-      <ul className="hidden md:flex mt-4 lg:text-2xl text-md  text-nowrap md:mr-5 m-auto ">
-        <li className="p-4 mr-3 hover:underline hover:text-[#b5b5b5] hover:underline-offset-[1rem] cursor-pointer">
-          <Link to="about" spy={true} smooth={true} offset={0} duration={300}>
-            About
-          </Link>
-        </li>
-        <li className="p-4 mr-3 hover:underline hover:text-[#b5b5b5] hover:underline-offset-[1rem] cursor-pointer">
-          <Link
-            to="projects"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={300}
-          >
-            Projects
-          </Link>
-        </li>
-        <li className="p-4 mr-3 hover:underline hover:text-[#b5b5b5] hover:underline-offset-[1rem] cursor-pointer">
-          <Link to="contact" spy={true} smooth={true} offset={0} duration={300}>
-            Contact
-          </Link>
-        </li>
-      </ul>
+      {HeaderView() === "/projects" ? (
+        <>
+          <ul className="hidden md:flex mt-4 lg:text-2xl text-md  text-nowrap md:mr-5 m-auto ">
+            <li className="p-4 mr-3 hover:underline hover:text-[#b5b5b5] hover:underline-offset-[1rem] cursor-pointer">
+              <Scroll
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={300}
+              >
+                About
+              </Scroll>
+            </li>
+          </ul>
+        </>
+      ) : (
+        <>
+          <ul className="hidden md:flex mt-4 lg:text-2xl text-md  text-nowrap md:mr-5 m-auto ">
+            <li className="p-4 mr-3 hover:underline hover:text-[#b5b5b5] hover:underline-offset-[1rem] cursor-pointer">
+              <Scroll
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={300}
+              >
+                About
+              </Scroll>
+            </li>
+            <li className="p-4 mr-3 hover:underline hover:text-[#b5b5b5] hover:underline-offset-[1rem] cursor-pointer">
+              <Scroll
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={300}
+              >
+                Projects
+              </Scroll>
+            </li>
+            <li className="p-4 mr-3 hover:underline hover:text-[#b5b5b5] hover:underline-offset-[1rem] cursor-pointer">
+              <Scroll
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={300}
+              >
+                Contact
+              </Scroll>
+            </li>
+          </ul>
+        </>
+      )}
       <div onClick={handleNav} className="block md:hidden">
         {nav ? (
           <AiOutlineClose size={20} className="cursor-pointer" />
@@ -57,23 +95,29 @@ function Nav() {
         <h1 className="w-full text-2xl text-black text-nowrap m-4">
           Bruno Ynumaru
         </h1>
-        <Link to="about" spy={true} smooth={true} offset={0} duration={300}>
+        <Scroll to="about" spy={true} smooth={true} offset={0} duration={300}>
           <li
             onClick={handleNav}
             className="p-4 border-b border-gray-300 cursor-pointer"
           >
             About
           </li>
-        </Link>
-        <Link to="projects" spy={true} smooth={true} offset={0} duration={300}>
+        </Scroll>
+        <Scroll
+          to="projects"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={300}
+        >
           <li
             onClick={handleNav}
             className="p-4 border-b border-gray-300 cursor-pointer"
           >
             Projects
           </li>
-        </Link>
-        <Link
+        </Scroll>
+        <Scroll
           onClick={handleNav}
           to="contact"
           spy={true}
@@ -84,7 +128,7 @@ function Nav() {
           <li className="p-4 border-b border-gray-300 cursor-pointer">
             Contact
           </li>
-        </Link>
+        </Scroll>
       </ul>
     </div>
   );
