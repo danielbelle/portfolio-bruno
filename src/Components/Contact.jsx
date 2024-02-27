@@ -50,7 +50,7 @@ function Contact() {
       <h1 className="flex justify-center text-[3rem] font-[600] mb-10">
         Contact
       </h1>
-      <div className="flex justify-center rounded-[32px] border-solid border-[0.1rem] border-gray-500 sm:m-auto bg-transparent m-5">
+      <div className="content justify-center rounded-[32px] border-solid border-[0.1rem] border-gray-500 sm:m-auto bg-transparent m-5">
         <div className="flex items-center justify-center gap-0 sm:gap-[1rem] m-[1rem]">
           <img
             src={Email}
