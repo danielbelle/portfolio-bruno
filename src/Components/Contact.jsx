@@ -55,7 +55,7 @@ function Contact() {
           <img
             src={Email}
             alt="Email icon"
-            className="cursor-default h-[2rem] ml-[0.5rem]"
+            className="cursor-default h-[2rem]"
           />
           <form ref={form} onSubmit={sendEmail}>
             <div className="bg-transparent max-w-[700px] w-[70%] sm:w-[100%] items-center rounded-[5rem] whitespace-nowrap">
@@ -64,11 +64,11 @@ function Contact() {
                 name="user_email"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="your-email@email.com"
-                className="flex-1 h-[100%] border-none outline-none font-[1rem] sm:font-[1.3rem] px-[1rem] py-[1rem] sm:placeholder:text-[1rem] placeholder:text-[0.9rem] placeholder:text-gray-500"
+                placeholder="email@email.com"
+                className="flex-1 h-[100%] border-none outline-none font-[1rem] sm:font-[1.3rem] mx-[0.3rem] my-[1rem] sm:placeholder:text-[1rem] placeholder:text-[0.9rem] placeholder:text-gray-500 w-[80%] sm:w-[100%]"
               ></input>
               <input
-                className="bg-transparent text-[1rem] sm:text-[1.2rem] cursor-pointer font-[600] text-black transition duration-200 items-center justify-center ml-[1rem]"
+                className="bg-transparent text-[1rem] sm:text-[1.2rem] cursor-pointer font-[600] text-black transition duration-200 items-center justify-center sm:ml-[1rem]"
                 type="submit"
                 value={"Send"}
               />
