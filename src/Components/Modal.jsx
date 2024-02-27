@@ -1,6 +1,6 @@
 import React from "react";
 
-const Modal = ({ visible, onClose }) => {
+const Modal = ({ visible, onClose, projects }) => {
   const handleCloseClick = () => {
     onClose();
   };
@@ -13,7 +13,7 @@ const Modal = ({ visible, onClose }) => {
       className="fixed inset-0 bg-black bg-opacity-20 backdrop-blur-sm flex justify-center items-center"
     >
       <div className="bg-white p-2 rounded">
-        <p>1</p>
+        <p>{projects}</p>
       </div>
     </div>
   );

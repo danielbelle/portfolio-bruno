@@ -1,39 +1,11 @@
-import React, { useState } from "react";
-import Proj1 from "../Assets/project-1.jpg";
-import Proj2 from "../Assets/project-2.png";
-import Proj3 from "../Assets/project-3.webp";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Modal from "./Modal";
+import data from "../data/data";
 
 function Projects() {
-  const carouselProjects = [
-    {
-      key: "1",
-      img: `${Proj1}`,
-      name: "Experimental Bench Automation and Computer Vision Algorithm",
-      demo: "https://bkiyoshi.in/?project=experimental-bench-automation-computer-vision-algorithm",
-    },
-    {
-      key: "2",
-      img: `${Proj2}`,
-      name: "Flare monitor PoC",
-      demo: "https://bkiyoshi.in/?project=flare-monitor-poc",
-    },
-    {
-      key: "3",
-      img: `${Proj3}`,
-      name: "Stock price prediction LSTM",
-      demo: "https://bkiyoshi.in/?project=stock-price-prediction-lstm",
-    },
-    {
-      key: "4",
-      img: `${Proj3}`,
-      name: "Stock price prediction LSTM",
-      demo: "https://bkiyoshi.in/?project=stock-price-prediction-lstm",
-    },
-  ];
 
   var settings = {
     dots: true,
@@ -81,8 +53,19 @@ function Projects() {
   };
 
   const [showModal, setShowModal] = useState(false);
+  const [modalKey, setModalKey] = useState();
 
   const handleOnClose = () => setShowModal(false);
+
+  useEffect(() => {
+    const close = (e) => {
+      if (e.keyCode === 27) {
+        setShowModal(false);
+      }
+    };
+    window.addEventListener("keydown", close);
+    return () => window.removeEventListener("keydown", close);
+  }, []);
 
   return (
     <div
@@ -97,7 +80,7 @@ function Projects() {
         <div className="m-auto items-center">
           <div className="mt-[1rem]">
             <Slider {...settings}>
-              {carouselProjects.map((d) => (
+              {data.map((d) => (
                 <div
                   key={d.key}
                   className="ml-10 sm:ml-5 min-h-[300px] inline-block max-h-[450px] min-w-[240px] max-w-[300px] bg-white "
@@ -130,7 +113,10 @@ function Projects() {
                         )}
                         <button
                           className="font-[600] text-[0.8rem] ease-in duration-300 p-[0.8rem] w-[7rem] rounded-[32px] border-solid border-[0.1rem] border-[#353535] hover:cursor-pointer hover:bg-[#353535] hover:text-white bg-[#FFF]"
-                          onClick={() => setShowModal(true)}
+                          onClick={() => {
+                            setModalKey(d.key);
+                            setShowModal(true);
+                          }}
                         >
                           Project
                         </button>
@@ -143,7 +129,7 @@ function Projects() {
           </div>
         </div>
       </div>
-      <Modal onClose={handleOnClose} visible={showModal} />
+      <Modal onClose={handleOnClose} visible={showModal} projects={modalKey} />
     </div>
   );
 }
