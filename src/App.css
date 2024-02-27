@@ -23,7 +23,6 @@ html {
   position: relative;
   min-height: 100vh;
   min-width: 490px;
-  width: 85vw;
   max-width: 1900px;
   margin: 0rem auto;
 }
