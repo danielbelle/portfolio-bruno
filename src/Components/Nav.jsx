@@ -20,10 +20,11 @@ function Nav() {
   const scroller = Scroll.scroller;
 
   const goToPageAndScroll = async (selector) => {
-    navigate("/");
-    scroller.scrollTo(selector, {
+    await navigate("/");
+    await scroller.scrollTo(selector, {
       duration: 200,
       smooth: true,
+      offset: 0,
       spy: true,
     });
   };
