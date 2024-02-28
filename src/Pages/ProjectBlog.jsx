@@ -1,6 +1,7 @@
 import React from "react";
 import data from "../data/data";
 import { NavLink } from "react-router-dom";
+import ProjectsBlog from "../Components/ProjectsBlog";
 
 const ProjectBlog = () => {
   const projects = data;
@@ -12,6 +13,7 @@ const ProjectBlog = () => {
           <p>{project.name}</p>
         </NavLink>
       ))}
+      <ProjectsBlog /> 
     </div>
   );
 };
