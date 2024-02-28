@@ -3,7 +3,7 @@ import Experience from "../Assets/experience.png";
 
 function About() {
   return (
-    <div
+    <section
       id="about"
       className="justify-between items-center max-w-[1160px] m-auto relative min-h-[1060px] sm:min-h-[750px] h-[80vh] pt-[30px] pb-[50px]"
     >
@@ -61,7 +61,7 @@ function About() {
                   alt="experience icon"
                   className="h-[2rem] mx-auto my-2"
                 />
-                <h3 className="font-bold">BIX Techt</h3>
+                <h3 className="font-bold">BIX Tech</h3>
                 <p className="text-gray-600 lg:text-[1rem] text-[0.8rem]">
                   8 months <br />
                   Data Scientist
@@ -83,7 +83,7 @@ function About() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

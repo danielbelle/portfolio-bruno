@@ -11,7 +11,7 @@ function Footer() {
   }, []);
 
   return (
-    <div
+    <footer
       id="footer"
       className="flex justify-between items-center max-w-[1160px] relative min-h-[26vh] m-auto pt-[5rem] mb-[5rem] flex-col"
     >
@@ -43,7 +43,7 @@ function Footer() {
           Copyright &#169; {date} Bruno Kiyoshi Ynumaru. All Rights Reserved.
         </p>
       </div>
-    </div>
+    </footer>
   );
 }
 

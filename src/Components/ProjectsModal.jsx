@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Modal from "./Modal";
 import data from "../data/data";
-import { NavLink as RouterLink } from "react-router-dom";
 
 function Projects() {
+
   var settings = {
     dots: true,
     infinite: false,
@@ -51,8 +52,23 @@ function Projects() {
     ],
   };
 
+  const [showModal, setShowModal] = useState(false);
+  const [modalKey, setModalKey] = useState();
+
+  const handleOnClose = () => setShowModal(false);
+
+  useEffect(() => {
+    const close = (e) => {
+      if (e.keyCode === 27) {
+        setShowModal(false);
+      }
+    };
+    window.addEventListener("keydown", close);
+    return () => window.removeEventListener("keydown", close);
+  }, []);
+
   return (
-    <section
+    <div
       id="projects"
       className="flex justify-center flex-col max-w-[1160px] m-auto relative min-h-[400px] sm:mt-[200px] mt-[300px] md:mt-0"
     >
@@ -74,7 +90,7 @@ function Projects() {
                       <img
                         src={d.img}
                         alt="project"
-                        className="h-[100%] w-[100%] rounded-t-[29px]"
+                        className="h-[100%] w-[100%] rounded-t-[31px] pt-1"
                       />
                     </div>
                     <div className="flex flex-col min-h-[150px] bg-[#fafafa] bottom-0 rounded-b-[32px]">
@@ -95,15 +111,15 @@ function Projects() {
                         ) : (
                           <></>
                         )}
-                        <RouterLink
-                          to="/projects"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                        <button
+                          className="font-[600] text-[0.8rem] ease-in duration-300 p-[0.8rem] w-[7rem] rounded-[32px] border-solid border-[0.1rem] border-[#353535] hover:cursor-pointer hover:bg-[#353535] hover:text-white bg-[#FFF]"
+                          onClick={() => {
+                            setModalKey(d.key);
+                            setShowModal(true);
+                          }}
                         >
-                          <button className="font-[600] text-[0.8rem] ease-in duration-300 p-[0.8rem] w-[7rem] rounded-[32px] border-solid border-[0.1rem] border-[#353535] hover:cursor-pointer hover:bg-[#353535] hover:text-white bg-[#FFF]">
-                            Details
-                          </button>
-                        </RouterLink>
+                          Project
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -113,7 +129,8 @@ function Projects() {
           </div>
         </div>
       </div>
-    </section>
+      <Modal onClose={handleOnClose} visible={showModal} projects={modalKey} />
+    </div>
   );
 }
 

@@ -7,7 +7,7 @@ import { Link } from "react-scroll";
 
 function Profile() {
   return (
-    <div
+    <section
       id="profile"
       className="flex justify-between items-center max-w-[1160px] mx-auto my-[1rem] px-4 relative gap-[4rem] min-h-[400px] h-[80vh] pt-2"
     >
@@ -59,7 +59,7 @@ function Profile() {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

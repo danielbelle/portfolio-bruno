@@ -42,7 +42,7 @@ function Contact() {
     }
   };
   return (
-    <div
+    <section
       id="contact"
       className="flex justify-center flex-col h-[80hv] max-w-[1160px] m-auto relative h-min-[500px] box-border sm:mt-[15rem] md:mt-[7rem] lg:mt-[5rem] pt-[8rem] min-w-[350px]"
     >
@@ -68,7 +68,7 @@ function Contact() {
                 className="flex-1 h-[100%] border-none outline-none font-[1rem] sm:font-[1.3rem] mx-[0.3rem] my-[1rem] sm:placeholder:text-[1rem] placeholder:text-[0.9rem] placeholder:text-gray-500 w-[70%]"
               ></input>
               <input
-                className="bg-transparent rounded-[5rem] text-[1rem] sm:text-[1.2rem] cursor-pointer font-[600] text-black transition duration-200 items-center justify-center ml-[1rem]"
+                className="bg-transparent text-[1rem] sm:text-[1.2rem] cursor-pointer font-[600] text-black transition duration-200 items-center justify-center ml-[1rem]"
                 type="submit"
                 value={"Send"}
               />
@@ -96,7 +96,7 @@ function Contact() {
           </p>
         </a>
       </div>
-    </div>
+    </section>
   );
 }
 

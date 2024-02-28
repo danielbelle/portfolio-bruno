@@ -1,20 +1,21 @@
-import './App.css';
-import About from './Components/About';
-import Nav from './Components/Nav';
-import Profile from './Components/Profile'
-import Projects from './Components/Projects';
-import Contact from './Components/Contact';
-import Footer from './Components/Footer';
+import "./App.css";
+import ProjectBlog from "./Pages/ProjectBlog";
+import Home from "./Pages/Home";
+import Nav from "./Components/Nav";
+import DetailProject from "./Pages/DetailProject";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Nav />
-      <Profile />
-      <About />
-      <Projects />
-      <Contact />
-      <Footer />
+    <div className="App w-screen overflow-x-hidden">
+      <Router>
+        <Nav />
+        <Routes>
+          <Route path="*" element={<Home />} />
+          <Route path="/projects" element={<ProjectBlog />} />
+          <Route path="/project/:id" element={<DetailProject />}></Route>
+        </Routes>
+      </Router>
     </div>
   );
 }
