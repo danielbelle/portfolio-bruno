@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ProjectsBlog = () => {
-  const blogs1 = [
+const ProjectsBlog = ({ projects }) => {
+  /*const blogs1 = [
     {
       id: 1,
       title: "Blog 1",
@@ -42,19 +42,23 @@ const ProjectsBlog = () => {
         "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
       authorDesc: "Web Developer",
     },
-  ];
+  ];*/
 
   return (
     <div className="w-full bg-[#f9f9f9] py-[50px]">
       <div className="max-w-[1240px] mx-auto">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 ss:grid-cols-1 gap-8 px-4 text-black">
-          {blogs1.map((blog) => (
-            <Link key={blog.id} to={`/project/${blog.id}`}>
+          {projects.map((project) => (
+            <Link key={project.key} to={`/project/${project.key}`}>
               <div className="bg-white rounded-xl overflow-hidden drop-shadow-md">
-                <img className="h-56 w-full object-cover" src={blog.coverImg} alt="" />
+                <img
+                  className="h-56 w-full object-cover"
+                  src={project.img}
+                  alt=""
+                />
                 <div className="p-8">
-                  <h3 className="font-bold text-2xl my-1">{blog.title}</h3>
-                  <p className="text-gray-600 text-xl">{blog.desc}</p>
+                  <h3 className="font-bold text-2xl my-1">{project.name}</h3>
+                  <p className="text-gray-600 text-xl">{project.name}</p>
                 </div>
               </div>
             </Link>

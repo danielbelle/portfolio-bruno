@@ -9,7 +9,7 @@ const DetailProject = () => {
   const project = data[id];
   return (
     <>
-      <DetailsProject />
+      <DetailsProject project={project ? project : ""} />
     </>
   );
 };

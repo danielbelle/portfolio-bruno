@@ -1,9 +1,8 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 
-const DetailsProject = () => {
-  const { id } = useParams();
-
+const DetailsProject = ({ project }) => {
+  const selectedProject = project;
+  /*
   const blogs = [
     {
       id: 1,
@@ -45,13 +44,24 @@ const DetailsProject = () => {
       authorDesc: "Web Developer",
     },
   ];
-
-  let blog = blogs.filter((blog) => blog.id === id);
-  blog = blog[0];
-  console.log(blog);
-
+*/
   return (
     <div className="w-full pb-10 bg-[#f9f9f9]">
+      <div className="bg-white rounded-xl overflow-hidden drop-shadow-md">
+        <img
+          className="h-56 w-full object-cover"
+          src={selectedProject.img}
+          alt=""
+        />
+        <div className="p-8">
+          <h3 className="font-bold text-2xl my-1">{selectedProject.name}</h3>
+          <p className="text-gray-600 text-xl">{selectedProject.name}</p>
+        </div>
+      </div>
+    </div>
+
+    /*
+      <div className="w-full pb-10 bg-[#f9f9f9]">
       <div className="max-w-[1240px] mx-auto">
         <div
           className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 ss:grid-cols-1
@@ -86,7 +96,8 @@ const DetailsProject = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div> 
+    */
   );
 };
 
