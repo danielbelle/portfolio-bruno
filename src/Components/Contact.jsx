@@ -50,12 +50,12 @@ function Contact() {
       <h1 className="flex justify-center text-[3rem] font-[600] mb-10">
         Contact
       </h1>
-      <div className="content justify-center rounded-[32px] border-solid border-[0.1rem] border-gray-500 sm:m-auto bg-transparent m-5">
+      <div className="flex justify-center rounded-[32px] border-solid border-[0.1rem] border-gray-500 sm:m-auto bg-transparent m-5">
         <div className="flex items-center justify-center gap-0 sm:gap-[1rem] m-[1rem]">
           <img
             src={Email}
             alt="Email icon"
-            className="cursor-default h-[2rem]"
+            className="cursor-default h-[2rem] mr-3"
           />
           <form ref={form} onSubmit={sendEmail}>
             <div className="bg-transparent max-w-[700px] w-[70%] sm:w-[100%] items-center rounded-[5rem] whitespace-nowrap">
@@ -68,7 +68,7 @@ function Contact() {
                 className="flex-1 h-[100%] border-none outline-none font-[1rem] sm:font-[1.3rem] mx-[0.3rem] my-[1rem] sm:placeholder:text-[1rem] placeholder:text-[0.9rem] placeholder:text-gray-500 w-[70%]"
               ></input>
               <input
-                className="bg-transparent text-[1rem] sm:text-[1.2rem] cursor-pointer font-[600] text-black transition duration-200 items-center justify-center ml-[1rem]"
+                className="bg-transparent rounded-[5rem] text-[1rem] sm:text-[1.2rem] cursor-pointer font-[600] text-black transition duration-200 items-center justify-center ml-[1rem]"
                 type="submit"
                 value={"Send"}
               />
@@ -91,7 +91,9 @@ function Contact() {
             alt="Email icon"
             className="cursor-pointer h-[2rem] ml-[0.5rem]"
           />
-          <p className="flex justify-center font-[600] items-center text-black">WhatsApp Me</p>
+          <p className="flex justify-center font-[600] items-center text-black">
+            WhatsApp Me
+          </p>
         </a>
       </div>
     </div>
