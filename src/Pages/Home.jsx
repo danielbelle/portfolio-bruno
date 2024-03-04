@@ -3,7 +3,6 @@ import About from "../Components/About";
 import Profile from "../Components/Profile";
 import Projects from "../Components/Projects";
 import Contact from "../Components/Contact";
-import Footer from "../Components/Footer";
 
 const Home = () => {
   return (
@@ -12,7 +11,6 @@ const Home = () => {
       <About />
       <Projects />
       <Contact />
-      <Footer />
     </>
   );
 };

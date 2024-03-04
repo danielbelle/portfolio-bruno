@@ -46,10 +46,11 @@ const DetailsProject = ({ project }) => {
   ];
 */
   return (
-    <div className="w-full pb-10 bg-[#f9f9f9]">
-      <div className="bg-white rounded-xl overflow-hidden drop-shadow-md">
+    <div className="justify-between items-center max-w-[1160px] m-auto relative pt-[30px] w-full pb-10 bg-white">
+      <div className="overflow-hidden drop-shadow-sm">
+        <h3 className="text-center font-bold text-4xl my-2">{selectedProject.name}</h3>
         <img
-          className="h-56 w-full object-cover"
+          className="h-39 w-full object-cover"
           src={selectedProject.img}
           alt=""
         />
