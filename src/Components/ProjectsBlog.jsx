@@ -49,7 +49,7 @@ const ProjectsBlog = ({ projects }) => {
       <div className="max-w-[1160px] mx-auto">
         <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 ss:grid-cols-1 gap-4 px-4 text-black ">
           {projects.map((project) => (
-            <Link key={project.key} to={`/project/${project.key}`}>
+            <Link key={project.key} to={`/project/${project.ref}`}>
               <div className="bg-white rounded-xl overflow-hidden drop-shadow-md border-[0.1rem] border-[#f5f5f5]">
                 <img
                   className="h-56 w-full object-cover"

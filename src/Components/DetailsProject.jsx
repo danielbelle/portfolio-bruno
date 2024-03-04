@@ -2,6 +2,7 @@ import React from "react";
 
 const DetailsProject = ({ project }) => {
   const selectedProject = project;
+  console.log("selectedProject = " + selectedProject);
   /*
   const blogs = [
     {
@@ -48,7 +49,9 @@ const DetailsProject = ({ project }) => {
   return (
     <div className="justify-between items-center max-w-[1160px] m-auto relative pt-[30px] w-full pb-10 bg-white">
       <div className="overflow-hidden drop-shadow-sm">
-        <h3 className="text-center font-bold text-4xl my-2">{selectedProject.name}</h3>
+        <h3 className="text-center font-bold text-4xl my-2">
+          {selectedProject.name}
+        </h3>
         <img
           className="h-39 w-full object-cover"
           src={selectedProject.img}

@@ -82,7 +82,8 @@ function Projects() {
                         {d.name}
                       </h2>
                       <div className="flex content-center justify-center items-center gap-1 mb-2">
-                        {d.github ? (
+                        {
+                        /*  {d.github ? (
                           <a
                             href={d.github}
                             target="_blank"
@@ -94,8 +95,9 @@ function Projects() {
                           </a>
                         ) : (
                           <></>
-                        )}
-                        <RouterLink to={"/project/" + d.key}>
+                        )} */
+                        }
+                        <RouterLink to={"/project/" + d.ref}>
                           <button className="font-[600] text-[0.8rem] ease-in duration-300 p-[0.8rem] w-[7rem] rounded-[32px] border-solid border-[0.1rem] border-[#353535] hover:cursor-pointer hover:bg-[#353535] hover:text-white bg-[#FFF]">
                             Details
                           </button>

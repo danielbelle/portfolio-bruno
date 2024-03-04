@@ -1,9 +1,9 @@
 import React from "react";
-import data from "../data/data";
+import datas from "../data/data";
 import ProjectsBlog from "../Components/ProjectsBlog";
 
 const ProjectBlog = () => {
-  const projects = data;
+  const projects = datas;
 
   return (
     <>
