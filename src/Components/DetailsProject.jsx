@@ -1,10 +1,11 @@
 import React from "react";
+import Parser from "html-react-parser";
 
 const DetailsProject = ({ project }) => {
   const selectedProject = project;
   console.log("selectedProject = " + selectedProject);
 
-  const blogs = [
+  /*const blogs = [
     {
       id: 1,
       title: "Blog 1",
@@ -44,9 +45,9 @@ const DetailsProject = ({ project }) => {
         "https:images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
       authorDesc: "Web Developer",
     },
-  ];
+  ];*/
   return (
-    <div className="justify-between items-center max-w-[1160px] m-auto relative pt-[30px] w-full pb-10 bg-white">
+    <div className="justify-between items-center max-w-[1000px] m-auto relative pt-[30px] w-full pb-10 bg-white px-5 lg:px-0">
       <div className="overflow-hidden drop-shadow-sm">
         <h3 className="text-center font-bold text-4xl my-5">
           {selectedProject.name}
@@ -60,7 +61,7 @@ const DetailsProject = ({ project }) => {
           <h3 className="font-bold text-2xl my-1">{selectedProject.name}</h3>
           <p className="text-gray-600 text-xl">{selectedProject.name}</p>
         </div>
-        <div dangerouslySetInnerHTML={{__html: selectedProject.txt}} />
+        <div>{Parser(selectedProject.txt)}</div>
       </div>
     </div>
 
