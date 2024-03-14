@@ -16,7 +16,6 @@ import Proj0d4 from "../Assets/project-0.4.jpg";
 import Proj1d1 from "../Assets/project-1.1.png";
 import Proj1d2 from "../Assets/project-1.2.png";
 import Proj1d3 from "../Assets/project-1.3.png";
-import Proj1d4 from "../Assets/project-1.4.png";
 
 import Proj3d1 from "../Assets/project-3.1.jpg";
 import Proj3d2 from "../Assets/project-3.2.jpg";
@@ -27,7 +26,7 @@ import Proj5d1 from "../Assets/project-5.1.png";
 import Proj5d2 from "../Assets/project-5.2.jpg";
 import Proj5d3 from "../Assets/project-5.3.jpg";
 import Proj5d4 from "../Assets/project-5.4.jpg";
-import Proj5d6 from "../Assets/project-5.5.jpg";
+import Proj5d5 from "../Assets/project-5.5.jpg";
 
 import Proj6d1 from "../Assets/project-6.1.jpg";
 import Proj6d2 from "../Assets/project-6.2.jpg";
@@ -48,7 +47,7 @@ const data = [
     <h1 className="p-5 items-center justify-center text-center text-2xl">
       Company: SINMEC (UFSC)
     </h1>
-
+    
     <div>
       <h1 className="text-xl">Technologies:</h1>
       <ul className="list-item list-disc pl-10 my-5">
@@ -72,7 +71,7 @@ const data = [
     <div className="flex justify-center items-center">
       <figure>
         <img 
-          src="http://bkiyoshi.in/wp-content/uploads/2022/10/Screenshot-2022-10-10-205538-e1665447625713.jpg"
+          src=${Proj0d1}
           alt=""
         />
         <figcaption className="text-center text-sm mb-5">
@@ -98,7 +97,7 @@ const data = [
       <div className="flex justify-center items-center">
         <figure className="pb-5">
           <img 
-            src="http://bkiyoshi.in/wp-content/uploads/2022/10/Screenshot-2022-10-10-205156-e1665447679311.jpg"
+            src=${Proj0d2}
             alt=""
           />
           <figcaption className="text-center text-sm mb-5">
@@ -110,7 +109,7 @@ const data = [
       <div className="flex justify-center items-center">
         <figure className="pb-5">
           <img 
-            src="http://bkiyoshi.in/wp-content/uploads/2022/10/Screenshot-2022-10-10-205330.jpg"
+            src=${Proj0d3}
             alt=""
           />
           <figcaption className="text-center text-sm mb-5">
@@ -122,7 +121,7 @@ const data = [
       <div className="flex justify-center items-center"></div>
       <figure className="pb-5">
         <img 
-          src="http://bkiyoshi.in/wp-content/uploads/2022/10/Screenshot-2022-10-10-205453.jpg"
+          src=${Proj0d4}
           alt=""
         />
         <figcaption className="text-center text-sm mb-5">
@@ -135,7 +134,7 @@ const data = [
       <p className="mt-5">
         Honestly, with the explosion of neural networks in the last few
         years, our parametric approach to image segmentation is probably
-        waaay outdated. But it was an amazing experience nonetheless!
+        way outdated. But it was an amazing experience nonetheless!
       </p>
       <p className="mb-5 mt-5">
         If you'd like more detail, you can check our article in the link
@@ -167,7 +166,7 @@ const data = [
     img: `${Proj1}`,
     name: "Flare monitor PoC",
     demo: "https://bkiyoshi.in/?project=flare-monitor-poc",
-    txt: `<div >
+    txt: `<div>
     <h1 className="p-5 items-center justify-center text-center text-2xl">
       Company: GreyLogix Brasil
     </h1>
@@ -199,7 +198,7 @@ const data = [
       </p>
       <p className="mb-5">
         Monitoring of flares in offshore oil rigs is done by having a
-        person periodicaly check whether the flare is lit or not. This is
+        person periodically check whether the flare is lit or not. This is
         unacceptable in a context where companies must have control of
         their greenhouse gases emissions.
       </p>
@@ -216,27 +215,28 @@ const data = [
 
     <div className="flex-col justify-center items-center pt-5">
       <figure>
-        <img 
-          src="http://bkiyoshi.in/wp-content/uploads/2022/10/main-interface.png"
-          alt=""
-        />
+        <img src=${Proj1d1} alt="" />
         <figcaption className="text-center text-sm pt-5">
           Main interface
         </figcaption>
       </figure>
     </div>
-
-    <div className="flex justify-center items-center"></div>
-    <figure className="pb-5">
-      <img
-        
-        src="http://bkiyoshi.in/wp-content/uploads/2022/10/sysoverview.png"
-        alt=""
-      />
-      <figcaption className="text-center text-sm pt-5 pb-5">
-        System overview
-      </figcaption>
-    </figure>
+    <div className="flex justify-center items-center">
+      <figure className="pb-5">
+        <img src=${Proj1d2} alt="" />
+        <figcaption className="text-center text-sm pt-5 pb-5">
+          System overview
+        </figcaption>
+      </figure>
+    </div>
+    <div className="flex justify-center items-center">
+      <figure className="pb-5">
+        <img src=${Proj1d3} alt="" />
+        <figcaption className="text-center text-sm pt-5 pb-5">
+        Vision system working on a video
+        </figcaption>
+      </figure>
+    </div>
   </div>`
   },
   {
@@ -273,12 +273,12 @@ const data = [
       </p>
       <p className="mb-5">
         The second was a classification model which, instead of
-        prediciting the stock price, aimed to predict if the price would
+        predicting the stock price, aimed to predict if the price would
         go up or down on the next day. Both models were based on LSTM's.
       </p>
       <p>
         Two datasets were used: historical prices of WEGE3 stocks and
-        historical value of the BOVESPA index (Brazil's main benchamrk
+        historical value of the BOVESPA index (Brazil's main benchmark
         index).
       </p>
     </div>
@@ -364,7 +364,7 @@ const data = [
     <div className="flex-col justify-center items-center pt-10">
       <figure>
         <img 
-          src="http://bkiyoshi.in/wp-content/uploads/2022/10/extraoil-main.jpg"
+          src=${Proj3d1}
           alt=""
         />
         <figcaption className="text-center text-sm pt-5">
@@ -376,8 +376,7 @@ const data = [
     <div className="flex justify-center items-center pt-10"></div>
     <figure >
       <img
-        
-        src="http://bkiyoshi.in/wp-content/uploads/2022/10/rotochart.jpg"
+        src=${Proj3d2}
         alt=""
       />
       <figcaption className="text-center text-sm pt-5 pb-5">
@@ -413,7 +412,7 @@ const data = [
     <div className="flex justify-center items-center pt-10">
       <figure >
         <img 
-          src="http://bkiyoshi.in/wp-content/uploads/2022/10/Screenshot-2022-10-13-171447.jpg"
+          src=${Proj4d1}
           alt=""
         />
       </figure>
@@ -548,7 +547,7 @@ const data = [
     <div className="flex justify-center items-center pt-7">
       <figure className="pb-5">
         <img 
-          src="http://bkiyoshi.in/wp-content/uploads/2022/10/comos-tia_2.png"
+          src=${Proj5d1}
           alt=""
         />
         <figcaption className="text-center text-sm mb-5">
@@ -560,7 +559,7 @@ const data = [
     <div className="flex justify-center items-center pt-7">
       <figure className="pb-5">
         <img 
-          src="http://bkiyoshi.in/wp-content/uploads/2022/10/hw-compare-screen.jpg"
+          src=${Proj5d2}
           alt=""
         />
         <figcaption className="text-center text-sm mb-5">
@@ -572,7 +571,7 @@ const data = [
     <div className="flex justify-center items-center pt-7">
       <figure className="pb-5">
         <img 
-          src="http://bkiyoshi.in/wp-content/uploads/2022/10/sw-compare-screen.jpg"
+          src=${Proj5d3}
           alt=""
         />
         <figcaption className="text-center text-sm mb-5">
@@ -584,7 +583,7 @@ const data = [
     <div className="flex justify-center items-center pt-7">
       <figure className="pb-5">
         <img 
-          src="http://bkiyoshi.in/wp-content/uploads/2022/10/fbd-code.jpg"
+          src=${Proj5d4}
           alt=""
         />
         <figcaption className="text-center text-sm mb-5">
@@ -595,7 +594,7 @@ const data = [
     <div className="flex justify-center items-center pt-7">
       <figure className="pb-5">
         <img 
-          src="http://bkiyoshi.in/wp-content/uploads/2022/10/code-in-comos.jpg"
+          src=${Proj5d5}
           alt=""
         />
         <figcaption className="text-center text-sm mb-5">
@@ -660,7 +659,7 @@ const data = [
     <div className="flex justify-center items-center pt-7">
       <figure className="pb-5">
         <img 
-          src="http://bkiyoshi.in/wp-content/uploads/2022/10/xoilweb-main.jpg"
+          src=${Proj6d1}
           alt=""
         />
         <figcaption className="text-center text-sm mb-5">
@@ -672,7 +671,7 @@ const data = [
     <div className="flex justify-center items-center pt-7">
       <figure className="pb-5">
         <img 
-          src="http://bkiyoshi.in/wp-content/uploads/2022/10/xoil-web-params.jpg"
+          src=${Proj6d2}
           alt=""
         />
         <figcaption className="text-center text-sm mb-5">
@@ -684,7 +683,7 @@ const data = [
     <div className="flex justify-center items-center pt-7">
       <figure className="pb-5">
         <img 
-          src="http://bkiyoshi.in/wp-content/uploads/2022/10/xoil-web-results.jpg"
+          src=${Proj6d3}
           alt=""
         />
         <figcaption className="text-center text-sm mb-5">
@@ -733,7 +732,7 @@ const data = [
     <div className="flex justify-center items-center pt-7">
       <figure className="pb-5">
         <img 
-          src="http://bkiyoshi.in/wp-content/uploads/2022/10/oxyfree-main.jpg"
+          src=${Proj7d1}
           alt=""
         />
         <figcaption className="text-center text-sm mb-5">
@@ -745,7 +744,7 @@ const data = [
     <div className="flex justify-center items-center pt-7">
       <figure className="pb-5">
         <img 
-          src="http://bkiyoshi.in/wp-content/uploads/2022/10/oxyfree-params.jpg"
+          src=${Proj7d2}
           alt=""
         />
         <figcaption className="text-center text-sm mb-5">
