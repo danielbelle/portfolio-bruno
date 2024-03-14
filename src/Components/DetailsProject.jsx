@@ -49,7 +49,7 @@ const DetailsProject = ({ project }) => {
   return (
     <div className="justify-between items-center max-w-[1000px] m-auto relative pt-[30px] w-full pb-10 bg-white px-5 lg:px-0">
       <div className="overflow-hidden drop-shadow-sm">
-        <h3 className="text-center font-bold text-4xl my-5">
+        <h3 className="text-center font-bold text-4xl my-10">
           {selectedProject.name}
         </h3>
         <img
@@ -58,8 +58,9 @@ const DetailsProject = ({ project }) => {
           alt=""
         />
         <div className="p-8">
-          <h3 className="font-bold text-2xl my-1">{selectedProject.name}</h3>
-          <p className="text-gray-600 text-xl">{selectedProject.name}</p>
+          <h3 className="font-bold text-2xl my-1 text-center">
+            {selectedProject.name}
+          </h3>
         </div>
         <div>{Parser(selectedProject.txt)}</div>
       </div>
