@@ -34,7 +34,10 @@ function Nav() {
       className="flex justify-between items-center h-24 max-w-[1160px] mx-auto px-4 text-black"
       id="nav"
     >
-      <h1 className="w-full lg:text-4xl sm:text-2xl text-1xl text-black m-12 mt-15 p-4 pt-6 text-nowrap">
+      <h1
+        className="w-full lg:text-4xl sm:text-2xl text-1xl text-black m-12 mt-15 p-4 pt-6 text-nowrap cursor-pointer"
+        onClick={() => goToPageAndScroll("nav")}
+      >
         Bruno Kiyoshi Ynumaru
       </h1>
       <ul className="hidden md:flex mt-4 lg:text-2xl text-md  text-nowrap md:mr-5 m-auto ">
@@ -111,8 +114,11 @@ function Nav() {
             : "ease-in-out duration-500 fixed left-[-100%]"
         }
       >
-        <h1 className="w-full text-2xl text-black text-nowrap m-4">
-          Bruno Ynumaru
+        <h1
+          className="w-full text-2xl text-black text-nowrap m-4 cursor-pointer"
+          onClick={() => goToPageAndScroll("nav")}
+        >
+          <p onClick={handleNav}>Bruno Ynumaru</p>
         </h1>
         {location === "/" ? (
           <>
@@ -161,46 +167,24 @@ function Nav() {
         ) : (
           <>
             {" "}
-            <ScrollLink
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={300}
-            >
-              <li
-                onClick={handleNav}
-                className="p-4 border-b border-gray-300 cursor-pointer"
-              >
-                Home
-              </li>
-            </ScrollLink>
-            <ScrollLink
-              to="projects"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={300}
-            >
-              <li
-                onClick={handleNav}
-                className="p-4 border-b border-gray-300 cursor-pointer"
-              >
-                All Projects
-              </li>
-            </ScrollLink>
-            <ScrollLink
+            <li
               onClick={handleNav}
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={300}
+              className="p-4 border-b border-gray-300 cursor-pointer"
             >
-              <li className="p-4 border-b border-gray-300 cursor-pointer">
-                Contact
-              </li>
-            </ScrollLink>
+              <p onClick={() => goToPageAndScroll("nav")}>Home</p>
+            </li>
+            <li
+              onClick={handleNav}
+              className="p-4 border-b border-gray-300 cursor-pointer"
+            >
+              <RouterLink to="/projects">All Projects</RouterLink>
+            </li>
+            <li
+              className="p-4 border-b border-gray-300 cursor-pointer"
+              onClick={handleNav}
+            >
+              <p onClick={() => goToPageAndScroll("contact")}>Contact</p>
+            </li>
           </>
         )}
       </ul>

@@ -6,7 +6,9 @@ import Modal from "./Modal";
 import data from "../data/data";
 
 function Projects() {
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   var settings = {
     dots: true,
     infinite: false,

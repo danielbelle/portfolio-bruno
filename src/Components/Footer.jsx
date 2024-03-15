@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import {
+  NavLink as RouterLink,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import * as Scroll from "react-scroll";
 
@@ -79,15 +83,7 @@ function Footer() {
               Home
             </li>
             <li className="sm:p-4 p-2 sm:mr-3 hover:underline hover:text-[#b5b5b5] hover:underline-offset-[1rem] cursor-pointer">
-              <ScrollLink
-                to="nav"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={300}
-              >
-                All Projects
-              </ScrollLink>
+            <RouterLink to="/projects">All Projects</RouterLink>
             </li>
             <li
               className="sm:p-4 p-2 sm:mr-3 hover:underline hover:text-[#b5b5b5] hover:underline-offset-[1rem] cursor-pointer"
