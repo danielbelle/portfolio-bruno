@@ -69,8 +69,8 @@ function Projects() {
                   key={d.key}
                   className="ml-10 sm:ml-5 min-h-[300px] inline-block max-h-[450px] min-w-[240px] max-w-[300px] bg-white "
                 >
-                  <div className="flex flex-col md:mr-1 lg:mr-2 border-solid border-[0.1rem] border-gray-500 rounded-[32px] rounded-t-[30px]">
-                    <div className="flex items-start min-h-[230px] border-b-[0.1rem] ">
+                  <div className="flex flex-col md:mr-1 lg:mr-2 border-solid border-[0.1rem] border-gray-500 rounded-[32px] rounded-t-[30px]  hover:shadow-lg mb-3">
+                    <div className="flex items-start min-h-[230px] border-b-[0.1rem]">
                       <img
                         src={d.img}
                         alt="project"

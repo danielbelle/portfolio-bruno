@@ -8,8 +8,8 @@ const ProjectsBlog = ({ projects }) => {
         <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 text-black m-auto items-center justify-center">
           {projects.map((project) => (
             <Link className="" key={project.key} to={`/project/${project.ref}`}>
-              <div className="min-h-[250px] inline-block max-h-[450px] min-w-[240px] max-w-[300px] bg-white mx-1">
-                <div className="flex flex-col border-solid border-[0.1rem] border-gray-500 rounded-[32px] rounded-t-[30px] min-h-[150px]">
+              <div className="min-h-[250px] inline-block max-h-[450px] min-w-[240px] max-w-[300px] bg-white mx-1 ">
+                <div className="flex flex-col border-solid border-[0.1rem] border-gray-500 rounded-[32px] rounded-t-[30px] min-h-[150px] hover:shadow-xl">
                   <div className="flex items-start min-h-[200px] border-b-[0.1rem]">
                     <img
                       src={project.img}
